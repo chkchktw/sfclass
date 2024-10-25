@@ -2,8 +2,58 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 設定固定寬度的 viewport -->
+    <meta name="viewport" content="width=1581, initial-scale=1.0">
     <title>我是假網站</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            min-width: 1581px; /* 最小寬度 */
+            overflow-x: auto; /* 允許橫向捲動 */
+        }
+
+        .wrapper {
+            width: 1581px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .responsive-image {
+            width: 1581px;
+            height: 795px;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 可選：添加捲動條樣式 */
+        ::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
     <script>
         function showAlert() {
             alert("看到QRcode不要亂掃!!!!");
@@ -11,8 +61,11 @@
     </script>
 </head>
 <body>
-
-    <img src="sfclass.png" alt="圖片" onclick="showAlert()" style="cursor: pointer;"/>
-
+    <div class="wrapper">
+        <img src="sfclass.png" 
+             alt="圖片" 
+             onclick="showAlert()" 
+             class="responsive-image"/>
+    </div>
 </body>
 </html>
