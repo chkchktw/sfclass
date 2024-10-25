@@ -62,7 +62,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <img src="sfclass.png" 
+        <img src="sfclass.jpg" 
              alt="圖片" 
              onclick="showAlert()" 
              class="responsive-image"/>
